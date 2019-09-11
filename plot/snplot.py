@@ -30,6 +30,6 @@ plt.savefig('hist_&_scatter.png')
 
 a=[]
 a = np.c_[h,omega_m]
-fig = corner.corner(a,bins=100,color='b',weights = -logL,labels = ['$h$','$\Omega_m$'])
+fig = corner.corner(a,bins=65,color='b',weights = -logL,labels = ['$h$','$\Omega_m$'])
 fig.suptitle("hubble paramater $h$ vs. matter density parameter $\Omega_m$ ")
 fig.savefig('corner_plot.png')
