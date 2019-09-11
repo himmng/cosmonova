@@ -16,7 +16,7 @@ chain.setup()
 sampler = MpiCosmoHammerSampler(
             params= params,
             likelihoodComputationChain=chain,
-            filePrefix="supernovaIa",
+            filePrefix="cosmonovaIa",
             walkersRatio=50,
             burninIterations=250,
             sampleIterations=250)

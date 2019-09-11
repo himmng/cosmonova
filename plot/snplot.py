@@ -2,9 +2,10 @@ import numpy as np
 import corner
 import matplotlib.pyplot as plt
 
-omega_m , h = np.loadtxt("cosmosupernovaIa.out", usecols = (0,1), unpack = True) #======= hubble's parameter and matter density =====#
+path = '/home/ht/PycharmProjects/cosmonova/supernovaIa/'
+omega_m , h = np.loadtxt(path+"cosmonovaIa.out", usecols = (0,1), unpack = True) #======= hubble's parameter and matter density =====#
 
-logL = np.loadtxt("cosmosupernovaIaprob.out", usecols = (0), unpack = True) #=== loglikelyhood =====#
+logL = np.loadtxt(path+"cosmonovaIaprob.out", usecols = (0), unpack = True) #=== loglikelyhood =====#
 
 
 plt.subplot(221)
@@ -23,4 +24,4 @@ plt.subplot(223)
 plt.xlabel('$\Omega_m$')
 plt.ylabel('$h$')
 plt.scatter(omega_m , h, c = -logL)
-plt.show()
+plt.savefig('params.png')
